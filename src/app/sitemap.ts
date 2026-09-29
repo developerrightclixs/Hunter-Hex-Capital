@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 
+export const dynamic = "force-static";
+
 /** Every public route. Priority ranks the home page above the inner pages. */
 const routes = [
   { path: "", priority: 1 },
@@ -23,3 +25,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 }
+

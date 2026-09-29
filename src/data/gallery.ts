@@ -15,13 +15,13 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "federal-depository",
-    label: "Federal Depository",
+    label: "Federal Depositories",
     image: "/images/gallery/federal-depository.webp",
     alt: "Reinforced depository vault door",
   },
   {
     id: "private-wealth-consulting",
-    label: "Private Wealth Client",
+    label: "Private Wealth Clients",
     image: "/images/gallery/private-wealth-consulting.webp",
     alt: "Consultants meeting with a client in a boardroom",
   },

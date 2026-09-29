@@ -835,8 +835,8 @@ export const metalLabels: Record<Metal, string> = {
   palladium: "Palladium",
 };
 
+/** Options in the catalog's Type filter. "coin" is deliberately left out. */
 export const typeOrder: ProductType[] = [
-  "coin",
   "bar",
   "round",
   "proof",
