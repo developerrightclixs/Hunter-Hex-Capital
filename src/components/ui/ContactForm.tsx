@@ -3,6 +3,7 @@
 import { useEffect, useId, useState } from "react";
 import Link from "next/link";
 import { submitContactRequest, type ContactPayload } from "@/lib/forms";
+import { showSubmitError, showSubmitSuccess } from "@/lib/alerts";
 import { findProductBySlug } from "@/data/products";
 import { cn } from "@/lib/utils";
 
@@ -112,9 +113,11 @@ export function ContactForm() {
         product: "",
         message: "",
       });
+      showSubmitSuccess("Your request has been received — a specialist will be in touch shortly.");
     } else {
       setStatus("error");
       setFormMessage(result.error);
+      showSubmitError(result.error);
     }
   }
 

@@ -2,6 +2,7 @@
 
 import { useId, useState } from "react";
 import { submitEmailCapture } from "@/lib/forms";
+import { showSubmitError, showSubmitSuccess } from "@/lib/alerts";
 import { cn } from "@/lib/utils";
 
 /**
@@ -52,9 +53,15 @@ export function EmailCaptureForm({
       setStatus("sent");
       setMessage("Thank you — check your inbox shortly.");
       setValue("");
+      showSubmitSuccess(
+        source === "newsletter"
+          ? "You're subscribed — watch your inbox for market updates."
+          : "Your request has been received — check your inbox shortly.",
+      );
     } else {
       setStatus("error");
       setMessage(result.error);
+      showSubmitError(result.error);
     }
   }
 
